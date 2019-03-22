@@ -1,12 +1,13 @@
 import React from 'react'
-import '../App.css';
+import './Feature.css';
+
 class FeatureItem extends React.Component{
   
   render(){
   const selectedClass = this.props.item.name === this.props.selected[this.props.keyData].name ? 'feature__selected' : '';
   const featureClass = 'feature__option ' + selectedClass;
-    console.log('test props featureitem',this.props.item.name)  
-    console.log('test',this.props.selected[this.props.keyData].name)
+    //console.log('test props featureitem',this.props.item.name)  
+    //console.log('test',this.props.selected[this.props.keyData].name)
     return(
       
        <li key={this.props.index} className="feature__item">
