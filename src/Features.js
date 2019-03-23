@@ -4,18 +4,41 @@ import FeatureTypes from './FeatureTypes';
 export default function Features(props) {
   
   
+  // return(
+
+  //   Object.keys(props.features)
+  //   .map(key => 
+
+  //   <FeatureTypes 
+  //     key = {key}
+  //     features = {props.features}
+  //     id = {key}
+  //     updateFeature = {props.updateFeature}
+  //     selected = {props.selected}
+  //   />
+      
+  //   )     
+
+  // )
   return(
 
     Object.keys(props.features)
     .map(key => 
 
-    <FeatureTypes 
+    <div className="feature" key={key}>
+      <div className="feature__name">{key}</div>
+      <ul className="feature__list">
+
+      <FeatureTypes 
       key = {key}
       features = {props.features}
       id = {key}
       updateFeature = {props.updateFeature}
       selected = {props.selected}
-    />
+      />
+
+      </ul>
+    </div>
       
     )     
 
